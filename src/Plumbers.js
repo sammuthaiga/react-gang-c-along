@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PlumberList from "./PlumberList";
+import AddPlumber from "./AddPlumber";
+
 
 class Plumbers extends Component {
     state = {
@@ -36,10 +38,20 @@ class Plumbers extends Component {
             }
         ]
     }
+    addPlumber =(plumber) => {
+        plumber.id = Math.random();
+        let plumbers = [...this.state.plumbers, plumber];
+        this.setState({
+            plumbers: plumbers
+        });
+      }
+    
     render() {
        return (
         <div className="plumber-list">
             <PlumberList plumbers={this.state.plumbers} />
+            < AddPlumber addPlumber ={this.addPlumber} />
+
         </div>
         );
     }
