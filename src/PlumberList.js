@@ -1,6 +1,6 @@
 import React from "react";
 
-const PlumberList = ({plumbers}) => {
+const PlumberList = ({plumbers, deletePlumber}) => {
         const plumberList = plumbers.map(plumber => {
             return (
                 <div className="plumber" key={plumber.id}>
@@ -10,6 +10,7 @@ const PlumberList = ({plumbers}) => {
                     <div style={{display: "inline-block", margin: "2px", border:"2px solid black"}}>Phone No: {plumber.phoneNo}</div>
                     <div style={{display: "inline-block", margin: "2px", border:"2px solid black"}}>Location: {plumber.location}</div>
                     <div style={{display: "inline-block", margin: "2px", border:"2px solid black"}}>Rate: {plumber.rate}</div>
+                    <button onClick={() => {deletePlumber(plumber.id)}}>Delete Plumber</button>
                 </div>
             );
         });
