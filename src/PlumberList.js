@@ -1,8 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 
-class PlumberList extends Component {
-    render() {
-        const { plumbers } = this.props;
+const PlumberList = ({plumbers}) => {
         const plumberList = plumbers.map(plumber => {
             return (
                 <div className="plumber" key={plumber.id}>
@@ -23,6 +21,6 @@ class PlumberList extends Component {
             </div>
         );
     }
-}
+
 
 export default PlumberList;
