@@ -16,7 +16,7 @@ class AddPlumber extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        this.props.addPlumber(this.state);
     }
     render() {
         return (
