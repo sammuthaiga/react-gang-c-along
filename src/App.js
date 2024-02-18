@@ -7,7 +7,7 @@ class App extends Component {
       <div>
         <h1>AM BEK!!!!!!</h1>
         <h3>Short Intro:</h3>
-        < Ninja />
+        < Ninja name="Amigo" age="30" belt="black" />
       </div>
     );
   }
