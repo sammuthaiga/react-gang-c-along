@@ -1,6 +1,6 @@
 import React from "react";
 
-const Ninja = ({ninjas}) => {
+const Ninja = ({ninjas, deleteNinja}) => {
   
     console.log({ninjas});
     // const ninjaList = ninjas.map(ninja => {
@@ -25,6 +25,7 @@ const Ninja = ({ninjas}) => {
           <div>Name: {ninja.name}</div>
           <div>Age: {ninja.age}</div>
           <div>Belt: {ninja.belt}</div>
+          <button onClick={() => {deleteNinja(ninja.id)}}>Delete Ninja</button>
         </div>
       ) : null;
     
